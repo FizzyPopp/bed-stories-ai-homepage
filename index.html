@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="w-100">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Bed Stories AI</title>
+</head>
+
+<body class="w-100">
+    <div id="main" class="w-100">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top p-0">
+            <div class="container container-fluid p-0">
+                <a class="navbar-brand ps-4 ps-md-2" href="/">
+                    <div class="app-name d-flex align-items-center">
+                        <img src="/images/logotipo-48.png" class="logo-img" alt="Logo">
+                        <span class="app-name text-blue h3 ms-3 d-none">Bed Stories AI</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon white"></span>
+                </button>
+                <div class="collapse navbar-collapse m-0 p-0" id="navbarSupportedContent">
+                    <span class="close-menu h2 d-inline-block d-md-none text-dark">x</span>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="d-inline-block d-md-none nav-item text-center py-3">
+                            <span class="title p-3">Menu</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-hiw text-light" href="#"
+                                onclick="scrollToSection(); return false;">
+                                <div class="row justify-content-end  g-0 p-0 m-0">
+                                    <div class="col-1 d-md-none p-0 m-0">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="col-10 col-md-12 p-0 m-0">
+                                        <span class="w-100 p-3 p-md-0">How it works</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-hiw text-light" href="/contact-us">
+                                <div class="row justify-content-end g-0 p-0 m-0">
+                                    <div class="col-1 d-md-none p-0 m-0">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="col-10 col-md-12 p-0 m-0">
+                                        <span class="w-100 p-3 p-md-0">Contact us</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+            $(document).ready(function () {
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    $(".nav-link").removeClass("btn");
+                }
+                $('.navbar-toggler').click(function () {
+                    $('#navbarSupportedContent').addClass('show');
+                });
+                $(document).click(function (event) {
+                    if (!$(event.target).closest('.navbar-collapse').length && !$(event.target).is('.navbar-collapse')) {
+                        $('#navbarSupportedContent').removeClass('show');
+                    }
+                });
+                $('.close-menu').on("click", function () {
+                    $('#navbarSupportedContent').removeClass('show');
+                });
+            });
+            function scrollToSection() {
+                var currentUrl = window.location.pathname;
+                if (currentUrl === '/') {
+                    var target = $('#hiw-container');
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                } else {
+                    window.location.href = '/#hiw-container';
+                }
+            }
+        </script>
+        <div class="main-content">
+            <div class="hero-container">
+                <img class="img-fluid hero-stars" src="/images/hero-bg.svg" alt="alt" />
+                <img class="img-fluid hero-fg" src="/images/hero-fg.svg" alt="alt" />
+                <div class="container hero-content">
+                    <div class="hero-phone">
+                        <div class="hero-phone-contents">
+                            <img class="img-cover" src="/images/hero-phone-1.png" alt="alt" />
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Bed Stories AI</h1>
+                        <div class="hero-subheading">
+                            Where Dreams Come Alive with Every Story
+                        </div>
+                        <p>
+                            Embark on a thrilling journey with Bedtime Stories, where you'll discover customized or random adventures crafted by AI, enhanced with mesmerizing visuals, all waiting to be savored and revisited whenever the magic calls.
+                        </p>
+                        <div class="hero-button-container">
+                            <a class="d-btn" href="#" target="_blank">
+                                <img src="/images/app-store.png" alt="Download on the App Store" />
+                            </a>
+                            <a class="d-btn" href='#' target="_blank">
+                                <img src="/images/google-play.png" alt="Get it on Google Play" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-background container-fluid">
+                </div>
+            </div>
+            <!-- <div class="gradient-purple ui-waves layer sp-horizontal sp-has-buttons vh-100"> -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-xl-6">
+                        <div class="content-container vh-100 d-block d-md-flex align-items-center">
+                            <div class="content">
+                                <p class="title w-100">
+                                    <strong>Bed Stories AI</strong>
+                                </p>
+                                <p class="lead w-100">
+                                    Where Dreams Come Alive with Every Story
+                                </p>
+                                <p class="d-none d-md-block h5 w-100 mt-4">
+                                    Enter the magical world of Bedtime Stories! Dive into imagination by customizing
+                                    your story or choosing a random one. Personalize it with preferences, and
+                                    experience AI crafting wonderful and unique stories. Every story can be
+                                    complemented by beautiful images. Save your favorite ones and revisit the magic
+                                    anytime!
+                                </p>
+                                <div class="p-lg-2 p-xs-1">
+                                    <a class="d-btn" href="#" target="_blank">
+                                        <img src="/images/app-store.png" alt="Download on the App Store" />
+                                    </a>
+                                    <a class="d-btn" href='#' target="_blank">
+                                        <img src="/images/google-play.png" alt="Get it on Google Play" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-xl-6">
+                        <div class="main-img-container d-block d-xl-flex justify-content-end vh-100 align-items-center">
+                            <img class="main-img w-75" src="/images/phones.png" alt="phones" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="my-4"></span>
+        <div id="hiw-container" class="py-4">
+            <!--    <div class="container px-4">
+        <hr class="my-4">
+        <div class="row justify-content-center py-4">
+            <div class="col-12 text-center">
+                <p class="h2 text-green mb-4">Bedtime Stories!</p>
+                <img class="img-p" src="/images/app-home.png" alt="App Home"/>
+                <p class="text-gray w-75 m-auto">Our app uses AI to craft magic bedtime stories and illustrations for children. Parents can choose from pre-made stories or customize their own, ensuring each story is unique.
+                </p>                    
+            </div>
+        </div>
+    </div>-->
+            <div class="gray-layer">
+                <div class="container px-4">
+                    <span class="my-4"></span>
+                    <div class="row story justify-content-center mt-4 py-4">
+                        <div class="col-8 col-md-6">
+                            <div class="h-100 d-flex align-items-center text-center">
+                                <div>
+                                    <div>
+                                        <p class="text-blue h3 mb-4">Random Stories</p>
+                                    </div>
+                                    <div class="text-desc">
+                                        <p class="text-gray">Explore a world with our random stories feature!
+                                            Immerse yourself in tales crafted to inspire children to imagine a
+                                            magical world. Choose a category and start exploring.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6">
+                            <div class="d-flex h-100 align-items-center justify-content-center">
+                                <img class="img-p img-r" src="/images/r-story.png" alt="alt" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row story justify-content-center text-center py-4">
+                        <div class="col-4 col-md-6">
+                            <div class="d-flex h-100 align-items-center justify-content-center">
+                                <img class="img-p img-l" src="/images/c-story.png" alt="alt" />
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-6">
+                            <div class="h-100 d-flex align-items-center text-center">
+                                <div>
+                                    <div>
+                                        <p class="text-blue h3 mb-4">Custom Stories</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray text-desc">With our custom stories, you become the
+                                            author of your own adventure! Create a unique character
+                                            and personalize it with your likes and preferences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="my-4"></span>
+                    <div class="row justify-content-center text-center py-4">
+                        <div class="col-12 col-md-10 h-100 align-items-center">
+                            <div class="text-center">
+                                <p class="text-green h3 mb-4">Custom Images</p>
+                                <div class="d-flex h-100 align-items-center justify-content-around p-4">
+                                    <img class="shadow w-25 rounded" src="/images/1.png" alt="alt" />
+                                    <img class="shadow w-25 rounded" src="/images/2.png" alt="alt" />
+                                    <img class="shadow w-25 rounded" src="/images/3.png" alt="alt" />
+                                </div>
+                                <p class="images-text text-gray">Our AI generates images to bring your story to
+                                    life! Based on your narrative, we create magical images that complement your
+                                    tale. Our application ensures that each image perfectly captures the essence of
+                                    your story.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="my-4"></span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                var ini_scroll = $(window).scrollTop();
+
+                if (ini_scroll < 5) {
+                    $(".navbar").removeClass("bg-main").addClass("bg-transparent");
+                    $(".navbar").removeClass("shadow");
+                    $(".app-name").addClass("d-none").removeClass("d-inline");
+                    $(".navbar-toggler-icon").addClass("white");
+                    if (window.matchMedia("(min-width: 768px)").matches) {
+                        $(".btn-hiw").addClass("text-light").removeClass("text-blue");
+                    }
+                } else {
+                    $(".navbar").addClass("bg-main").removeClass("bg-transparent");
+                    $(".navbar").addClass("shadow");
+                    $(".app-name").addClass("d-inline").removeClass("d-none");
+                    $(".navbar-toggler-icon").removeClass("white");
+                    if (window.matchMedia("(min-width: 768px)").matches) {
+                        $(".btn-hiw").addClass("text-blue").removeClass("text-light");
+                    }
+                }
+                $(window).scroll(function () {
+                    var scroll = $(window).scrollTop();
+                    var url = window.location.href;
+                    var hashIndex = url.indexOf('#');
+
+                    if (scroll < 5) {
+                        $(".navbar").removeClass("bg-main").addClass("bg-transparent");
+                        $(".navbar").removeClass("shadow");
+                        $(".app-name").addClass("d-none").removeClass("d-inline");
+                        $(".navbar-toggler-icon").addClass("white");
+                        if (window.matchMedia("(min-width: 768px)").matches) {
+                            $(".btn-hiw").addClass("text-light").removeClass("text-blue");
+                        }
+                    } else {
+                        $(".navbar").addClass("bg-main").removeClass("bg-transparent");
+                        $(".navbar").addClass("shadow");
+                        $(".app-name").addClass("d-inline").removeClass("d-none");
+                        $(".navbar-toggler-icon").removeClass("white");
+                        if (window.matchMedia("(min-width: 768px)").matches) {
+                            $(".btn-hiw").addClass("text-blue").removeClass("text-light");
+                        }
+                    }
+                    if (hashIndex !== -1 && url.substring(hashIndex) === '#hiw-container') {
+                        window.history.replaceState({}, document.title, url.substring(0, hashIndex));
+                    }
+                });
+            });
+        </script>
+
+    </div>
+
+    <footer class="vw-100 bg-dark bg-gradient pb-1">
+        <div class="nav justify-content-center py-4">
+            <a href="/#hiw-container" class="px-2 text-white">How it works</a>
+            <a href="/contact-us" class="px-2 text-white">Contact us</a>
+            <a href="/terms" class="px-2 text-white terms-link">Terms & Conditions</a>
+        </div>
+        <hr class="w-50 m-auto pb-2" />
+        <p class="text-center text-light">Copyright © 2024 AMPC Software | Powered by AMPC Software</p>
+    </footer>
+    </div>
+</body>
+
+</html>
