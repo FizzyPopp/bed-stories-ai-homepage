@@ -18,7 +18,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url("/images/sky.jpeg");
+    background-image: url("/bed-stories-ai-homepage/images/sky.jpeg");
     z-index: -1000;
 }
 
@@ -368,7 +368,7 @@ p.text-gray {
 
 .gray-layer::before {
     background-size: 100% 97%;
-    background-image: url('/images/layer-2.png');
+    background-image: url('/bed-stories-ai-homepage/images/layer-2.png');
     background-position: bottom;
     opacity: 0.08;
     content: '';
